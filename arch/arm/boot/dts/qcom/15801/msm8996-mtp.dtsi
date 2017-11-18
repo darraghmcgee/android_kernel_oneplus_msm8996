@@ -939,6 +939,14 @@
 	aliases {
 		i2c3 = &i2c_3;
 	};
+
+	reserved-memory {
+		ramoops_mem: ramoops_region@ac000000 {
+			compatible = "removed-dma-pool";
+			no-map;
+			reg = <0 0xAC000000 0 0x200000>;
+		};
+	};
 };
 
 &firmware {
